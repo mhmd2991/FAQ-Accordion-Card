@@ -38,6 +38,7 @@ h4 {
     font-size: 1.2em;
     font-weight: 400;
     margin: 20px 0;
+    transition: all .5s ease-in-out;
 
 }
 
@@ -114,13 +115,17 @@ body {
 
 .question .fa-chevron-down {
     color: var(--softRed);
-    transition: transform .5s ease-in-out;
+    transition: all .5s ease-in-out;
 }
 
 .faq .answer {
     max-height: 0;
     overflow: hidden;
-    transition: max-height .8s ease;
+    transition: all .5s ease-in-out;
+}
+
+.faq.active .question h4 {
+    font-weight: 700;
 }
 
 .faq.active .answer {
@@ -130,10 +135,6 @@ body {
 
 .faq.active .fa-chevron-down {
     transform: rotate(180deg);
-}
-
-.faq.active .question h4 {
-    font-weight: 700;
 }
 
 @media (min-width: 1200px) {
